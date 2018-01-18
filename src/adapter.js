@@ -23,8 +23,8 @@ const babelReg    = require('babel-register');
  */
 const DEFAULT_OPTIONS = {
   babelConfig: {
-    extensions: [".jsx"],
-    presets: ['es2015', 'react'],
+    extensions: [".js"],
+    presets: ['env', 'react'],
   },
   renderMethod: 'renderToStaticMarkup',
 };
@@ -100,8 +100,7 @@ function registerBabel(app, config) {
     plugins: [
       ["module-resolver", {
         "alias": aliases
-      }],
-      "add-module-exports"
+      }]
     ]
   });
 
