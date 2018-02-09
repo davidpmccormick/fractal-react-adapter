@@ -101,7 +101,10 @@ function registerBabel(app, config) {
       ["module-resolver", {
         "alias": aliases
       }],
-      "add-module-exports"
+      "add-module-exports",
+      "transform-react-jsx",
+      "react-require",
+      "transform-flow-strip-types"
     ]
   });
 
